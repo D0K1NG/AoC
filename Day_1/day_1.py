@@ -23,6 +23,7 @@ def cli():
                 open(sys.argv[1], 'r').close()
             except FileNotFoundError:
                 print("** Specified file path is not correct! **")
+                help_page()
                 exit()
         else:
             print("** Specified file is not a \"txt\" file! **")
