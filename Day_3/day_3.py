@@ -95,10 +95,8 @@ def parse_line(line):
                     # while i < end and line[i].isspace():
                     #     i += 1
                     num2, i = get_num(i, line, max_digit)
-                    print(f"{num2}")
                     if num2 is not None:
                         if i < end and line[i] == ")":
-                            print(f"{num1} * {num2}")
                             results.append(num1 * num2)
 
         elif (i + 6) < end and line[i:i+7] == "don't()":

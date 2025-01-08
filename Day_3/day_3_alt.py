@@ -74,13 +74,10 @@ def search_line(line):
         if not any(matches):
             break
         indexes = [i.end() if i else float('inf') for i in matches]
-        print(indexes)
         switch = indexes.index(min(indexes))
-        print("switch value:", switch)
 
         if switch == 0 and do:
             result += int(mult_match.group(1)) * int(mult_match.group(2))
-            print("Result: ", result)
         elif switch == 1:
             do = 0
         elif switch == 2:
@@ -115,7 +112,3 @@ def main():
     print("Result is: ", read_input(path))
 
 main()
-
-# list = [None, 1.4, None, 1.5, 3]
-# match = [i*2 for i in list if i is not None]
-# print(match)
