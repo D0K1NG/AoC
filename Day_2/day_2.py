@@ -137,6 +137,8 @@ def read_input(path, tolerance):
             safe_cnt += 1
         line = file.readline()
     
+    file.close()
+    
     return safe_cnt
 
 def main():
